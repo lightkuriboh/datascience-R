@@ -1,4 +1,20 @@
 
+random_matrix <- function (rows = 0, cols = 0) {
+    m <- matrix(0, nrow = rows, ncol = cols)
+    nr <- nrow(m)
+    indices <- cbind(1:nr, sample(ncol(m), nr, TRUE))
+    print(indices)
+    m[indices] <- 1
+    
+    all(rowSums(m) == 1)
+    
+    m
+}
+
+my_random_matrix <- random_matrix(3, 3)
+my_random_matrix
+det(my_random_matrix)
+
 x <- 5
 y <- if(x < 3) {
   NA
