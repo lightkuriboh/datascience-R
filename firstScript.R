@@ -1,4 +1,8 @@
 
+vec <- c('a', 'bac', 'cb')
+grep('a', vec)
+table(grepl('a', vec))
+
 ?xtabs
 ?ftable
 # ftable(xtabs(measuring ~ factor1 + factor2))
